@@ -48,7 +48,7 @@ class _HomeScreenState extends State<HomeScreen> {
                 title: Text('Server Error'),
                 content: Text(e.toString()),
                 actions: [
-                  RaisedButton(
+                  ElevatedButton(
                     onPressed: () {
                       checkAuth();
                       Navigator.of(context).pop();
@@ -67,7 +67,7 @@ class _HomeScreenState extends State<HomeScreen> {
               title: Text('Server Error'),
               content: Text(e.toString()),
               actions: [
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     checkAuth();
                     Navigator.of(context).pop();
@@ -91,7 +91,7 @@ class _HomeScreenState extends State<HomeScreen> {
               title: Text('Server Error'),
               content: Text(e.toString()),
               actions: [
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     reloadMachines();
                     Navigator.of(context).pop();
@@ -109,7 +109,7 @@ class _HomeScreenState extends State<HomeScreen> {
               title: Text('Server Error'),
               content: Text(e.toString()),
               actions: [
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     checkAuth();
                     Navigator.of(context).pop();
@@ -186,7 +186,7 @@ class _HomeScreenState extends State<HomeScreen> {
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.start,
                             children: [
-                              RaisedButton.icon(
+                              ElevatedButton.icon(
                                 onPressed: () {
                                   reloadMachines();
                                 },
@@ -196,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               SizedBox(
                                 width: 10,
                               ),
-                              RaisedButton.icon(
+                              ElevatedButton.icon(
                                 onPressed: () {
                                   showDialog(
                                     barrierDismissible: false,

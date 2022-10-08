@@ -64,7 +64,7 @@ class _AuthScreenState extends State<AuthScreen> {
               title: Text('Server Error'),
               content: Text(e.toString()),
               actions: [
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     checkLogin();
                     Navigator.of(context).pop();

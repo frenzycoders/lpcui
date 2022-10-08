@@ -170,8 +170,11 @@ class _ShareScreenWebState extends State<ShareScreenWeb> {
               children: [
                 Padding(
                   padding: const EdgeInsets.all(4.0),
-                  child: RaisedButton.icon(
-                    color: createScreen ? Colors.black45 : Colors.blue,
+                  child: ElevatedButton.icon(
+                    style: ButtonStyle(
+                      backgroundColor: MaterialStateProperty.all(
+                          createScreen ? Colors.black45 : Colors.blue),
+                    ),
                     onPressed: () {
                       setState(() {
                         createScreen = true;
@@ -186,8 +189,11 @@ class _ShareScreenWebState extends State<ShareScreenWeb> {
                 ),
                 Padding(
                   padding: const EdgeInsets.all(4.0),
-                  child: RaisedButton.icon(
-                    color: createScreen ? Colors.blue : Colors.black45,
+                  child: ElevatedButton.icon(
+                    style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                      createScreen ? Colors.blue : Colors.black45,
+                    )),
                     onPressed: () {
                       setState(() {
                         createScreen = false;
@@ -213,8 +219,11 @@ class _ShareScreenWebState extends State<ShareScreenWeb> {
                               'Create shared link for [ ' + widget.path + ' ]'),
                         ),
                         currentLink != ''
-                            ? RaisedButton.icon(
-                                color: Colors.green,
+                            ? ElevatedButton.icon(
+                                style: ButtonStyle(
+                                  backgroundColor:
+                                      MaterialStateProperty.all(Colors.blue),
+                                ),
                                 onPressed: () {
                                   FlutterClipboard.copy(currentLink)
                                       .then((value) {
@@ -240,7 +249,7 @@ class _ShareScreenWebState extends State<ShareScreenWeb> {
         createScreen
             ? downloadCreate
                 ? CircularProgressIndicator()
-                : RaisedButton.icon(
+                : ElevatedButton.icon(
                     onPressed: () {
                       createDownloadLink();
                     },
@@ -250,7 +259,7 @@ class _ShareScreenWebState extends State<ShareScreenWeb> {
             : Container(),
         downloadCreate
             ? Container()
-            : RaisedButton(
+            : ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },

@@ -112,7 +112,7 @@ class _DeleteFileWidgetdState extends State<DeleteFileWidgetd> {
       actions: [
         deleteProgress
             ? Container()
-            : RaisedButton(
+            : ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
@@ -120,7 +120,7 @@ class _DeleteFileWidgetdState extends State<DeleteFileWidgetd> {
               ),
         deleteProgress
             ? const CircularProgressIndicator()
-            : RaisedButton(
+            : ElevatedButton(
                 onPressed: () {
                   deleteFile();
                 },

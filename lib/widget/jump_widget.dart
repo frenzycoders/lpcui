@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lc_mobile/src/controller/httpException.dart';
 import 'package:lc_mobile/src/controller/manager_controller.dart';
@@ -88,7 +87,7 @@ class _JumpToPathState extends State<JumpToPath> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          RaisedButton.icon(
+                          ElevatedButton.icon(
                             onPressed: () {
                               setDir(
                                   path: widget.managerController.sysDetails
@@ -100,7 +99,7 @@ class _JumpToPathState extends State<JumpToPath> {
                           const SizedBox(
                             width: 10,
                           ),
-                          RaisedButton.icon(
+                          ElevatedButton.icon(
                             onPressed: () {
                               setDir(path: '/');
                             },

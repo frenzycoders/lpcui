@@ -13,10 +13,15 @@ class SysDetails extends StatelessWidget {
   ManagerController managerController;
   @override
   Widget build(BuildContext context) {
-    final freeStorage =
-        double.parse(managerController.sysDetails.value.free.split('.')[0]);
-    final totatStorage = double.parse(
-        managerController.sysDetails.value.totalSpace.split('.')[0]);
+    final freeStorage = managerController.sysDetails.value.free.contains('.')
+        ? double.parse(managerController.sysDetails.value.free.split('.')[0])
+        : double.parse(managerController.sysDetails.value.free.split(' ')[0]);
+    final totatStorage =
+        managerController.sysDetails.value.totalSpace.contains('.')
+            ? double.parse(
+                managerController.sysDetails.value.totalSpace.split('.')[0])
+            : double.parse(
+                managerController.sysDetails.value.totalSpace.split(' ')[0]);
 
     return Card(
       elevation: 2,

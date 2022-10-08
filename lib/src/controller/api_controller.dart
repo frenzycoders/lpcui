@@ -14,7 +14,8 @@ import 'package:lc_mobile/src/models/user_model.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class ApiController extends GetxController {
-  final String apiAddr = 'http://api.lc-manager.bytecodes.club/';
+  final String apiAddr =
+      'http://localhost:5432/'; // 'http://api.lc-manager.bytecodes.club/';
   // 'http://192.168.185.59:5432/'; // 'http://localhost:5432/';
   late StorageController _storageController;
 

@@ -88,7 +88,7 @@ class _UploadFilesWidgetState extends State<UploadFilesWidget> {
         child: Padding(
           padding: EdgeInsets.all(10),
           child: fileObj == null
-              ? RaisedButton.icon(
+              ? ElevatedButton.icon(
                   onPressed: () async {
                     var result = await FilePicker.platform.pickFiles(
                         dialogTitle:
@@ -165,7 +165,7 @@ class _UploadFilesWidgetState extends State<UploadFilesWidget> {
                               ? Container()
                               : Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: RaisedButton.icon(
+                                  child: ElevatedButton.icon(
                                     onPressed: () {
                                       setState(() {
                                         fileObj = null;
@@ -187,7 +187,7 @@ class _UploadFilesWidgetState extends State<UploadFilesWidget> {
                                 )
                               : Padding(
                                   padding: const EdgeInsets.all(8.0),
-                                  child: RaisedButton.icon(
+                                  child: ElevatedButton.icon(
                                     onPressed: () {
                                       uploadFiles();
                                     },
@@ -211,7 +211,7 @@ class _UploadFilesWidgetState extends State<UploadFilesWidget> {
       actions: [
         uploadProgress
             ? Container()
-            : RaisedButton(
+            : ElevatedButton(
                 onPressed: () {
                   Navigator.of(context).pop();
                 },

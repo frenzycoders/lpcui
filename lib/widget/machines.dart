@@ -54,10 +54,11 @@ class _MachinesListState extends State<MachinesList> {
                         width: double.infinity,
                         child: Card(
                           elevation: 2,
-                          child: widget.homeController.machines.length == 0
+                          child: widget.homeController.machines.isEmpty
                               ? Container(
                                   alignment: Alignment.center,
-                                  child: Text('No Machines found , Create one'),
+                                  child: const Text(
+                                      'No Machines found , Create one'),
                                 )
                               : DataTable(
                                   dividerThickness: 5,
@@ -178,7 +179,7 @@ class _MachinesListState extends State<MachinesList> {
                                                               content: const Text(
                                                                   'Are you sure ?'),
                                                               actions: [
-                                                                RaisedButton(
+                                                                ElevatedButton(
                                                                   onPressed:
                                                                       () {
                                                                     deleteMachine(
@@ -192,7 +193,7 @@ class _MachinesListState extends State<MachinesList> {
                                                                       const Text(
                                                                           'YES'),
                                                                 ),
-                                                                RaisedButton(
+                                                                ElevatedButton(
                                                                   onPressed:
                                                                       () {
                                                                     Navigator.of(
@@ -337,7 +338,7 @@ class _MachinesListState extends State<MachinesList> {
                                                     content: const Text(
                                                         'Are you sure ?'),
                                                     actions: [
-                                                      RaisedButton(
+                                                      ElevatedButton(
                                                         onPressed: () {
                                                           deleteMachine(
                                                               id: element.id);
@@ -347,7 +348,7 @@ class _MachinesListState extends State<MachinesList> {
                                                         child:
                                                             const Text('YES'),
                                                       ),
-                                                      RaisedButton(
+                                                      ElevatedButton(
                                                         onPressed: () {
                                                           Navigator.of(context)
                                                               .pop();
@@ -428,7 +429,7 @@ class _MachinesListState extends State<MachinesList> {
                                                           content: const Text(
                                                               'Are you sure ?'),
                                                           actions: [
-                                                            RaisedButton(
+                                                            ElevatedButton(
                                                               onPressed: () {
                                                                 deleteMachine(
                                                                     id: widget
@@ -444,7 +445,7 @@ class _MachinesListState extends State<MachinesList> {
                                                               child: const Text(
                                                                   'YES'),
                                                             ),
-                                                            RaisedButton(
+                                                            ElevatedButton(
                                                               onPressed: () {
                                                                 Navigator.of(
                                                                         context)

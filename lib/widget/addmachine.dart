@@ -26,7 +26,7 @@ class _CreateMachineState extends State<CreateMachine> {
           height: 100,
           width: 300,
           child: widget.homeController.createMachine.isTrue
-              ? Center(
+              ? const Center(
                   child: CircularProgressIndicator(),
                 )
               : widget.homeController.machineCreated.isTrue
@@ -95,14 +95,18 @@ class _CreateMachineState extends State<CreateMachine> {
             ? []
             : widget.homeController.machineCreated.isTrue
                 ? [
-                    RaisedButton(
+                    ElevatedButton(
                       onPressed: () {
                         widget.homeController.reset();
                       },
                       child: Text('CREATE ANOTHER'),
                     ),
-                    RaisedButton(
-                      color: Colors.green,
+                    ElevatedButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all(
+                          Colors.green,
+                        ),
+                      ),
                       onPressed: () {
                         widget.homeController.reset();
                         Navigator.of(context).pop();
@@ -112,15 +116,18 @@ class _CreateMachineState extends State<CreateMachine> {
                   ]
                 : widget.homeController.machineCreateError.isTrue
                     ? [
-                        RaisedButton(
+                        ElevatedButton(
                           onPressed: () {
-                            
                             widget.homeController.reset();
                           },
                           child: Text('RETRY'),
                         ),
-                        RaisedButton(
-                          color: Colors.green,
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                              Colors.green,
+                            ),
+                          ),
                           onPressed: () {
                             widget.homeController.reset();
                             Navigator.of(context).pop();
@@ -129,15 +136,19 @@ class _CreateMachineState extends State<CreateMachine> {
                         )
                       ]
                     : [
-                        RaisedButton(
+                        ElevatedButton(
                           onPressed: () {
                             widget.homeController.reset();
                             Navigator.of(context).pop();
                           },
                           child: Text('CLOSE'),
                         ),
-                        RaisedButton(
-                          color: Colors.green,
+                        ElevatedButton(
+                          style: ButtonStyle(
+                            backgroundColor: MaterialStateProperty.all(
+                              Colors.green,
+                            ),
+                          ),
                           onPressed: () {
                             if (textEditingController.text.length > 4) {
                               widget.homeController.createMachinePocess(

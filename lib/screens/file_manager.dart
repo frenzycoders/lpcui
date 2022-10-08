@@ -45,7 +45,7 @@ class _FileManagerState extends State<FileManager> {
                 title: Text('Error !'),
                 content: Text(e.message),
                 actions: [
-                  RaisedButton(
+                  ElevatedButton(
                     onPressed: () {
                       checkAuth();
                       Navigator.of(context).pop();
@@ -64,7 +64,7 @@ class _FileManagerState extends State<FileManager> {
                 title: Text('Server Error'),
                 content: Text(e.toString()),
                 actions: [
-                  RaisedButton(
+                  ElevatedButton(
                     onPressed: () {
                       checkAuth();
                       Navigator.of(context).pop();
@@ -84,7 +84,7 @@ class _FileManagerState extends State<FileManager> {
               title: Text('Server Error'),
               content: Text(e.toString()),
               actions: [
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     checkAuth();
                     Navigator.of(context).pop();
@@ -127,7 +127,7 @@ class _FileManagerState extends State<FileManager> {
                   width < 1356 && width > 500
                       ? Padding(
                           padding: EdgeInsets.all(8),
-                          child: RaisedButton.icon(
+                          child: ElevatedButton.icon(
                             onPressed: () {
                               showDialog(
                                   context: context,
@@ -141,7 +141,7 @@ class _FileManagerState extends State<FileManager> {
                                         mid: Get.parameters['id'].toString(),
                                       ),
                                       actions: [
-                                        RaisedButton(
+                                        ElevatedButton(
                                           onPressed: () {
                                             Navigator.of(context).pop();
                                           },
@@ -170,7 +170,7 @@ class _FileManagerState extends State<FileManager> {
                                           mid: Get.parameters['id'].toString(),
                                         ),
                                         actions: [
-                                          RaisedButton(
+                                          ElevatedButton(
                                             onPressed: () {
                                               Navigator.of(context).pop();
                                             },
@@ -184,7 +184,7 @@ class _FileManagerState extends State<FileManager> {
                             )
                           : Container(
                               padding: EdgeInsets.all(6),
-                              child: RaisedButton.icon(
+                              child: ElevatedButton.icon(
                                 onPressed: () {
                                   showDialog(
                                       context: context,
@@ -200,7 +200,7 @@ class _FileManagerState extends State<FileManager> {
                                                 Get.parameters['id'].toString(),
                                           ),
                                           actions: [
-                                            RaisedButton(
+                                            ElevatedButton(
                                               onPressed: () {
                                                 Navigator.of(context).pop();
                                               },
@@ -217,7 +217,7 @@ class _FileManagerState extends State<FileManager> {
                   width < 1356 && width > 500
                       ? Padding(
                           padding: const EdgeInsets.all(8.0),
-                          child: RaisedButton.icon(
+                          child: ElevatedButton.icon(
                             onPressed: () {
                               showDialog(
                                   context: context,
@@ -230,7 +230,7 @@ class _FileManagerState extends State<FileManager> {
                                         managerController: _managerController,
                                       ),
                                       actions: [
-                                        RaisedButton(
+                                        ElevatedButton(
                                           onPressed: () {
                                             Navigator.of(context).pop();
                                           },
@@ -258,7 +258,7 @@ class _FileManagerState extends State<FileManager> {
                                           managerController: _managerController,
                                         ),
                                         actions: [
-                                          RaisedButton(
+                                          ElevatedButton(
                                             onPressed: () {
                                               Navigator.of(context).pop();
                                             },
@@ -363,8 +363,8 @@ class _FileManagerState extends State<FileManager> {
                                     fontSize: 20,
                                   ),
                                 ),
-                                RaisedButton.icon(
-                                  onPressed: () async  {
+                                ElevatedButton.icon(
+                                  onPressed: () async {
                                     await _managerController.setHomeDir(
                                       path: _managerController
                                           .currentWorkingRoute.value,

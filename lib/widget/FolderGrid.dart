@@ -46,14 +46,14 @@ class _FolderGridState extends State<FolderGrid> {
               title: Text('Error !'),
               content: Text(e.message),
               actions: [
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     loadDirsForMobile();
                     Navigator.of(context).pop();
                   },
                   child: Text('TRY AGAIN'),
                 ),
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -70,14 +70,14 @@ class _FolderGridState extends State<FolderGrid> {
               title: Text('Error !'),
               content: Text(e.toString()),
               actions: [
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     loadDirsForMobile();
                     Navigator.of(context).pop();
                   },
                   child: Text('TRY AGAIN'),
                 ),
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -133,8 +133,8 @@ class _FolderGridState extends State<FolderGrid> {
                           icon: Padding(
                             padding: const EdgeInsets.only(top: 6),
                             child: FileIcon(
-                              fileExt:
-                                  e.name.split('.')[e.name.split('.').length - 1],
+                              fileExt: e.name
+                                  .split('.')[e.name.split('.').length - 1],
                               size: 60,
                             ),
                           ),

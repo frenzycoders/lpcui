@@ -75,7 +75,7 @@ class _TreeViewState extends State<TreeView> {
                     ),
                   ),
                 ),
-                RaisedButton.icon(
+                ElevatedButton.icon(
                   onPressed: () {
                     getDirs();
                   },

@@ -22,14 +22,14 @@ class PathArray extends StatelessWidget {
               title: Text('Error !'),
               content: Text(e.message),
               actions: [
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     setDir(path: path, context: context);
                     Navigator.of(context).pop();
                   },
                   child: Text('TRY AGAIN'),
                 ),
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
@@ -46,14 +46,14 @@ class PathArray extends StatelessWidget {
               title: Text('Error !'),
               content: Text(e.toString()),
               actions: [
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     setDir(path: path, context: context);
                     Navigator.of(context).pop();
                   },
                   child: Text('TRY AGAIN'),
                 ),
-                RaisedButton(
+                ElevatedButton(
                   onPressed: () {
                     Navigator.of(context).pop();
                   },

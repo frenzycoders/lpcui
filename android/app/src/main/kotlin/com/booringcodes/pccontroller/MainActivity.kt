@@ -1,4 +1,4 @@
-package com.bytecodes.lc_mobile
+package com.booringcodes.pccontroller
 
 import io.flutter.embedding.android.FlutterActivity
 

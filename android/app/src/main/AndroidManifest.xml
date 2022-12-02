@@ -1,8 +1,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.bytecodes.lc_mobile">
+    package="com.booringcodes.pccontroller">
     <uses-permission android:name="android.permission.INTERNET"/>
    <application
-        android:label="lc_mobile"
+        android:label="pcController"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher"
         android:usesCleartextTraffic="true">
